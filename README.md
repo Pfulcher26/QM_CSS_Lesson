@@ -1,18 +1,18 @@
 # CSS and CSS Selectors in Web Development & QM
 
 ## Table of Contents
+- [Introduction: HTML, JavaScript, and CSS](#introduction-html-javascript-and-css)
 - [What is CSS?](#what-is-css)
 - [What is a CSS Selector?](#what-is-a-css-selector)
+- [Targeting CSS in Style Sheets](#practice-css)
+- [Targeting CSS with Javascript](#live-example)
 - [How Quantum Metric Uses CSS Selectors](#how-quantum-metric-uses-css-selectors)
   - Events
   - PII Remediation
   - Zones
   - Segments/Metrics
-- [Live Example](#live-example)
 - [Useful Links](#useful-links)
 - [CSS Cheat Sheet](#css-cheat-sheet-for-queryselector)
-- [Practice CSS](#practice-css)
-- [Introduction: HTML, JavaScript, and CSS - The Body Analogy](#introduction-html-javascript-and-css---the-body-analogy)
 
 ---
 
@@ -47,8 +47,8 @@ A CSS selector is a pattern used to target HTML elements for styling or scriptin
 
 ### Types of CSS Selectors:
 - **Simple Selectors**: Target elements by type, class, or ID (e.g., `p`, `.classname`, `#idname`).
-- **Pseudo-Classes**: Target elements in a specific state (e.g., `:hover`, `:first-child`).
 - **Attribute Selectors**: Target elements with specific attributes (e.g., `[type="text"]`, `[data-role="button"]`).
+- **Pseudo-Classes**: Target elements in a specific state (e.g., `:nth-child`, `:hover`, `:first-child`).
 - **Combinator Selectors**: Target elements based on their relationship (e.g., `.parent .child`, `.sibling + .adjacent`). 
 
 ---
@@ -73,22 +73,15 @@ While CSS stylesheets and the `querySelector` method both use CSS selectors to t
 
 ### CSS Stylesheets:
 - CSS selectors in stylesheets are used to define the visual appearance of elements across a webpage. Once a page is loaded, the CSS rules are applied to all matching elements automatically, without requiring JavaScript intervention.
-- CSS selectors in stylesheets typically target elements globally, meaning they apply to all elements matching the specified pattern (e.g., all `<p>` tags or elements with a specific class).
 
 ### querySelector in JavaScript:
 - The `querySelector` method, on the other hand, is used to select individual elements dynamically within JavaScript code, often to manipulate the selected elements (e.g., change styles, add event listeners, or retrieve values).
-- `querySelector` is more flexible in that it can target specific elements at runtime based on the document’s state. For example, you can use `querySelector` to select the first button clicked by a user or a specific item in a list after an interaction.
   
 ---
 
 ## Live Example
 
 Let's use [Tofugu](https://www.tofugu.com/) to understand how we can use query seletor to target different web page elements using CSS. Open the Developer Tools (right-click > Inspect or press F12), and try selecting different elements on the page. Observe how CSS selectors are used to target elements for styling and structure.
-
-### Try it:
-- Visit [Tofugu](https://www.tofugu.com/).
-- Use the Element Selector in Developer Tools to inspect an element, such as the navigation menu or article headings.
-- Copy the CSS selector path and see how it highlights similar elements on the page.
 
 ---
 
@@ -101,9 +94,10 @@ Quantum Metric can trigger events based on CSS selectors.  These are often used 
 CSS selectors help isolate and remediate PII (Personally Identifiable Information) by selecting specific input fields or data points on the page and anonymizing them.
 
 ### Zones
-In Quantum Metric, "zones" refer to specific areas of a webpage where analytics events are triggered. By using CSS selectors, you can target specific areas of the page to define and track user interactions more precisely.
+To be completed by Rutger
 
 ### Segments/Metrics
+To be completed by Rutger
 
 ---
 
@@ -123,6 +117,26 @@ Below is a quick reference to some of the most commonly used CSS selectors, spec
 - **Class Selector** (`.classname`): Targets elements with a specific class.
   ```javascript
   document.querySelector('.header'); // Selects the first element with the class 'header'
+
+- **ID Selector** (`#idname`): Targets a unique element with an ID.
+```javascript
+document.querySelector('#main-content'); // Selects the element with the ID 'main-content'
+```
+
+- **Attribute Selector** (`[attr="value"]`): Targets elements with a specific attribute value.
+```javascript
+document.querySelector('[type="text"]'); // Selects the first element with type="text"
+```
+
+- **Greedy Attribute Selector - Universal** (`[attr*="value"]`): Targets elements whose attribute value contains a specified substring.
+```javascript
+document.querySelector('[data-role*="admin"]'); // Selects the first element with data-role containing "admin"
+```
+
+- **Greedy Attribute Selector - Starts With** (`[attr^="value"]`): Targets elements whose attribute value starts with a specified string.
+```javascript
+document.querySelector('[data-category^="elec"]'); // Selects the first element with data-category starting with "elec"
+```
 
 ---
 

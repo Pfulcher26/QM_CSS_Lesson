@@ -55,7 +55,7 @@ A CSS selector is a pattern used to target HTML elements for styling or scriptin
 
 ## Targeting CSS in Style Sheets
 
-Let's use REPLIT to do a simle exercise demonstrating the types of CSS selectors in action. 
+Let's use REPLIT to do a simple exercise demonstrating the types of CSS selectors in action. 
 
 [Try out CSS on Replit here!](https://replit.com/)
 

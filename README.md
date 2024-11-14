@@ -53,7 +53,7 @@ A CSS selector is a pattern used to target HTML elements for styling or scriptin
 
 ---
 
-## Practice CSS
+## Targeting CSS in Style Sheets
 
 Let's use REPLIT to do a simle exercise demonstrating the types of CSS selectors in action. 
 
@@ -79,7 +79,7 @@ While CSS stylesheets and the `querySelector` method both use CSS selectors to t
   
 ---
 
-## Live Example
+## Targeting CSS with Javascript
 
 Let's use [Tofugu](https://www.tofugu.com/) to understand how we can use `querySelector` to target different web page elements using CSS. Open the Developer Tools (right-click > Inspect or press F12, or press `Command + Option + J` on Mac), and try selecting different elements on the page. Observe how CSS selectors are used to target elements for styling and structure.
 

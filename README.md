@@ -26,6 +26,8 @@ When building a website, HTML, JavaScript, and CSS work together like the body�
 
 By working together, these three languages bring a website to life!
 
+<img src="https://github.com/user-attachments/assets/3a1e783e-e1d9-489f-a006-bfbe4868cb6f" width="600" height="600" />
+
 ---
 
 ## What is CSS?
@@ -51,6 +53,20 @@ A CSS selector is a pattern used to target HTML elements for styling or scriptin
 
 ---
 
+## Practice CSS
+
+Let's use REPLIT to do a simle exercise demonstrating the types of CSS selectors in action. 
+
+[Try out CSS on Replit here!](https://replit.com/)
+
+---
+
+## Why Data Attributes Are Important for Dynamically Generated CSS
+
+Data attributes are essential for sites that use dynamically generated CSS because they provide a reliable way to target and interact with elements regardless of changing class names or IDs. When CSS is dynamically created or updated—such as during user interactions or content changes—data attributes remain static, ensuring elements can still be targeted by JavaScript and CSS selectors. This separation of concerns helps maintain clean code and improves performance. 
+
+---
+
 ## Targeting CSS in Stylesheets vs. querySelector
 
 While CSS stylesheets and the `querySelector` method both use CSS selectors to target elements on a web page, they serve different purposes and are used in different contexts.
@@ -62,6 +78,17 @@ While CSS stylesheets and the `querySelector` method both use CSS selectors to t
 ### querySelector in JavaScript:
 - The `querySelector` method, on the other hand, is used to select individual elements dynamically within JavaScript code, often to manipulate the selected elements (e.g., change styles, add event listeners, or retrieve values).
 - `querySelector` is more flexible in that it can target specific elements at runtime based on the document’s state. For example, you can use `querySelector` to select the first button clicked by a user or a specific item in a list after an interaction.
+  
+---
+
+## Live Example
+
+Let's use [Tofugu](https://www.tofugu.com/) to understand how we can use query seletor to target different web page elements using CSS. Open the Developer Tools (right-click > Inspect or press F12), and try selecting different elements on the page. Observe how CSS selectors are used to target elements for styling and structure.
+
+### Try it:
+- Visit [Tofugu](https://www.tofugu.com/).
+- Use the Element Selector in Developer Tools to inspect an element, such as the navigation menu or article headings.
+- Copy the CSS selector path and see how it highlights similar elements on the page.
 
 ---
 
@@ -77,34 +104,6 @@ CSS selectors help isolate and remediate PII (Personally Identifiable Informatio
 In Quantum Metric, "zones" refer to specific areas of a webpage where analytics events are triggered. By using CSS selectors, you can target specific areas of the page to define and track user interactions more precisely.
 
 ### Segments/Metrics
-
----
-
-## Live Example
-
-For a live example of how CSS selectors are used to create visually dynamic layouts, you can explore [Tofugu](https://www.tofugu.com/). Open the Developer Tools (right-click > Inspect or press F12), and try selecting different elements on the page. Observe how CSS selectors are used to target elements for styling and structure.
-
-### Try it:
-- Visit [Tofugu](https://www.tofugu.com/).
-- Use the Element Selector in Developer Tools to inspect an element, such as the navigation menu or article headings.
-- Copy the CSS selector path and see how it highlights similar elements on the page.
-
----
-
-## Useful Links
-
-Here are some valuable resources for learning and referencing CSS and CSS Selectors:
-
-- [MDN Web Docs on CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)  
-  Comprehensive documentation on CSS syntax, selectors, properties, and more.
-- [MDN Web Docs on CSS Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)  
-  Detailed explanation of different CSS selectors, including advanced options.
-- [CSS-Tricks](https://css-tricks.com/)  
-  A web design and development blog with tips, tutorials, and guides on CSS.
-- [W3Schools CSS Tutorial](https://www.w3schools.com/css/)  
-  A beginner-friendly resource for learning CSS with examples and exercises.
-- [Can I Use](https://caniuse.com/)  
-  A site to check browser compatibility for various CSS properties.
 
 ---
 
@@ -127,14 +126,56 @@ Below is a quick reference to some of the most commonly used CSS selectors, spec
 
 ---
 
-## Practice CSS
+## Combinator Selectors and the `>` Symbol
 
-Want to practice CSS in an interactive environment? Try it out on Replit by creating a new project, selecting HTML, CSS, JS, and experimenting with various CSS styles and selectors.
+The `>` (child combinator) selector targets direct child elements of a specified parent element. This is useful when you want to select elements that are immediate children of a given element, excluding deeper nested elements.
 
-[Try out CSS on Replit here!](https://replit.com/)
+### Direct Child Selector (`>`): Selects direct children of a parent element.
 
-Replit offers an online editor that allows you to build and preview websites in real-time, making it a great tool for learning and practicing CSS.
+```javascript
+document.querySelector('.parent > .child'); // Selects the first .child element that is a direct child of .parent
+```
 
+In this example, .child must be a direct child of .parent. If .child is nested deeper inside another element within .parent, it will not be selected.
+
+***Example:***
+
+```html
+<div class="parent">
+  <div class="child"></div> <!-- This will be selected -->
+  <div>
+    <div class="child"></div> <!-- This will NOT be selected -->
+  </div>
+</div>
+```
+
+### Combinations with Other Selectors
+
+You can combine the `>` selector with other selectors for more specific targeting.
+
+```javascript
+document.querySelector('.parent > .child:nth-child(2)'); // Selects the second .child that is a direct child of .parent
+
+```
+
+---
+
+## Useful Links
+
+Here are some valuable resources for learning and referencing CSS and CSS Selectors:
+
+- [MDN Web Docs on CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)  
+  Comprehensive documentation on CSS syntax, selectors, properties, and more.
+- [MDN Web Docs on CSS Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)  
+  Detailed explanation of different CSS selectors, including advanced options.
+- [CSS-Tricks](https://css-tricks.com/)  
+  A web design and development blog with tips, tutorials, and guides on CSS.
+- [W3Schools CSS Tutorial](https://www.w3schools.com/css/)  
+  A beginner-friendly resource for learning CSS with examples and exercises.
+- [Can I Use](https://caniuse.com/)  
+  A site to check browser compatibility for various CSS properties.
+
+---
 
 
   

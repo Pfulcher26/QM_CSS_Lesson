@@ -16,7 +16,7 @@
 
 ---
 
-## Introduction: HTML, JavaScript, and CSS - The Body Analogy
+## Introduction: HTML, JavaScript, and CSS 
 
 When building a website, HTML, JavaScript, and CSS work together like the body’s structure. Here's a simple way to think about their roles:
 

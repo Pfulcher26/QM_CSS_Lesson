@@ -1,4 +1,4 @@
-# CSS and CSS Selectors in Web Development & Quantum Metric (QM)
+# CSS and CSS Selectors in Web Development & QM
 
 ## Table of Contents
 - [What is CSS?](#what-is-css)

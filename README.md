@@ -81,7 +81,7 @@ While CSS stylesheets and the `querySelector` method both use CSS selectors to t
 
 ## Live Example
 
-Let's use [Tofugu](https://www.tofugu.com/) to understand how we can use query seletor to target different web page elements using CSS. Open the Developer Tools (right-click > Inspect or press F12), and try selecting different elements on the page. Observe how CSS selectors are used to target elements for styling and structure.
+Let's use [Tofugu](https://www.tofugu.com/) to understand how we can use `querySelector` to target different web page elements using CSS. Open the Developer Tools (right-click > Inspect or press F12, or press `Command + Option + J` on Mac), and try selecting different elements on the page. Observe how CSS selectors are used to target elements for styling and structure.
 
 ---
 

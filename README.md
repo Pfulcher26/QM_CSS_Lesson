@@ -119,24 +119,20 @@ Below is a quick reference to some of the most commonly used CSS selectors, spec
   document.querySelector('.header'); // Selects the first element with the class 'header'
 
 - **ID Selector** (`#idname`): Targets a unique element with an ID.
-```javascript
-document.querySelector('#main-content'); // Selects the element with the ID 'main-content'
-```
-
+  ```javascript
+  document.querySelector('#main-content'); // Selects the element with the ID 'main-content'
+  
 - **Attribute Selector** (`[attr="value"]`): Targets elements with a specific attribute value.
-```javascript
-document.querySelector('[type="text"]'); // Selects the first element with type="text"
-```
+  ```javascript
+  document.querySelector('[type="text"]'); // Selects the first element with type="text"
 
 - **Greedy Attribute Selector - Universal** (`[attr*="value"]`): Targets elements whose attribute value contains a specified substring.
-```javascript
-document.querySelector('[data-role*="admin"]'); // Selects the first element with data-role containing "admin"
-```
+  ```javascript
+  document.querySelector('[data-role*="admin"]'); // Selects the first element with data-role containing "admin"
 
 - **Greedy Attribute Selector - Starts With** (`[attr^="value"]`): Targets elements whose attribute value starts with a specified string.
-```javascript
-document.querySelector('[data-category^="elec"]'); // Selects the first element with data-category starting with "elec"
-```
+  ```javascript
+  document.querySelector('[data-category^="elec"]'); // Selects the first element with data-category starting with "elec"
 
 ---
 

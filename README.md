@@ -110,7 +110,7 @@ Below is a quick reference to some of the most commonly used CSS selectors, spec
 ### Common CSS Selectors for querySelector
 - **Universal Selector** (`*`): Targets all elements.
   ```javascript
-  document.querySelector('*'); // Selects the first element on the page
+  document.querySelectorAll('*'); // Selects every element on the page 
 
 - **Type Selector** (`element`): Targets all instances of a specific element.
   ```javascript

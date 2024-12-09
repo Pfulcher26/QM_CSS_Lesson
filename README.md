@@ -94,7 +94,9 @@ Quantum Metric can trigger events based on CSS selectors.  These are often used 
 CSS selectors help isolate and remediate PII (Personally Identifiable Information) by selecting specific input fields or data points on the page and anonymizing them.
 
 ### Zones
-To be completed by Rutger
+Quantum Metric leverages CSS classes, IDs, and data attributes to define zones for tracking user interactions. Depending on the HTML and CSS structure of the target website, this process can sometimes become complex. 
+
+In certain cases, specific data attributes, such as `data-promo-name`, may provide a more unique and reliable method for building zones compared to using classes or IDs. When these attributes are available, you can prioritize them by adjusting the **Capture Click Node Attributes** settings under the **Advanced Config** section.
 
 ### Segments/Metrics
 To be completed by Rutger
